@@ -1,0 +1,26 @@
+web:
+  image: analyticslibrary
+  command: node index.js
+  ports:
+    - "3000:3000"
+  volumes:
+    - .:/app
+  links:
+    - python-analytics
+    - nodejs-analytics
+    - ruby-analytics
+python-analytics:
+  image: python-analytics
+  command: python index.py
+  ports:
+    - "4000:4000"
+nodejs-analytics:
+  image: nodejs-analytics
+  command: node index.js
+  ports:
+    - "5000:5000"
+ruby-analytics:
+  image: ruby-analytics
+  command: ruby index.rb
+  ports:
+    - "4002:4002"
