@@ -10,17 +10,17 @@ web:
     - nodejs-analytics
     - ruby-analytics
 python-analytics:
-  image: python-analytics
+  image: notjrbauer/python-analytics:latest
   command: python index.py
   ports:
     - "4000:4000"
 nodejs-analytics:
-  image: nodejs-analytics
+  image: notjrbauer/nodejs-analytics:latest
   command: node index.js
   ports:
     - "5000:5000"
 ruby-analytics:
-  image: ruby-analytics
+  image: notjrbauer/ruby-analytics:latest
   command: ruby index.rb
   ports:
     - "4002:4002"
