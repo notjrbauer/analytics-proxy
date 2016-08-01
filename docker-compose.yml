@@ -1,5 +1,11 @@
+
+proxy:
+  image: notjrbauer/react-analytics:latest
+  command: nginx
+  ports:
+    - "80:80"
 web:
-  image: analyticslibrary
+  image: notjrbauer/analyticslibrary:latest
   command: node index.js
   ports:
     - "3000:3000"
